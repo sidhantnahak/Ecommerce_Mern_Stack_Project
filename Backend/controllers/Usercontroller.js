@@ -48,10 +48,7 @@ exports.userLogin=catchAsyncErrors(async(req,res,next)=>{
 
     }
     sendToken(user,201,res)
-    // res.status(200).json({
-    //     sucess:true,
-    //     message:`logged in sucessfully on ${user.email} mail`
-    // })
+ 
 
 })
 

@@ -61,6 +61,7 @@ const UpdateProfile = () => {
     }
 
     if (isUpdated) {
+      
       alert.success("Profile Updated Successfully");
       dispatch(loadUser());
 

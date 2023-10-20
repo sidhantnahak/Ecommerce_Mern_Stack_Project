@@ -35,7 +35,7 @@ const userSchema=new mongoose.Schema({
     },
     role:{
         type:String,
-        default:"admin"
+        default:"user"
     },
     cretedAt:{
         type:Date,
@@ -47,11 +47,13 @@ const userSchema=new mongoose.Schema({
 
 userSchema.pre("save",async function(next){
     if(!this.isModified("password")){
+
       next()
     }
 
     //hashing password
     this.password=await bcryptjs.hash(this.password,10)
+
 })
 
 //jwt token

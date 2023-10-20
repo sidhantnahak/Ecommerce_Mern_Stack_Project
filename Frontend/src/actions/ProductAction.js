@@ -31,6 +31,11 @@ import {
   CLEAR_ERRORS,
 } from "../constants/ProductConstants";
 
+axios.create({
+  baseURL:"http://localhost:4000",
+  withCredentials:true
+})
+
 //Get All Products
 export const getProduct = (keyword="",currentPage=1,price=[0, 25000],category,ratings=0) => async(dispatch)=>{
   // let keyword="apple"
@@ -58,7 +63,6 @@ export const getProduct = (keyword="",currentPage=1,price=[0, 25000],category,ra
       payload:error.response.data.message
     })
   }
-
 }
 
 // Get All Products For Admin

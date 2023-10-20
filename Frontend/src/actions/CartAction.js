@@ -4,6 +4,11 @@ import {
     SAVE_SHIPPING_INFO,
   } from "../constants/CartConstants";
   import axios from "axios";
+
+  axios.create({
+    baseURL:"http://localhost:4000",
+    withCredentials:true
+  })
   
   // Add to Cart
   export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {

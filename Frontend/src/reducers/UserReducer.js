@@ -58,7 +58,6 @@ import {
           loading: false,
           isAuthenticated: true,
           user: action.payload,
-          message:"this is sidhant"
         };
   
       case LOGOUT_SUCCESS:

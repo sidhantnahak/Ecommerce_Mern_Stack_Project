@@ -39,7 +39,10 @@ import {
     CLEAR_ERRORS,
   } from "../constants/UserConstants";
   
-
+axios.create({
+  baseURL:"http://localhost:4000",
+  withCredentials:true
+})
   // Login
   export const login = (email, password) => async (dispatch) => {
     try {

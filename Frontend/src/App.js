@@ -109,6 +109,8 @@ function App() {
                <Route exact path='/success' element={<OrderSuccess />} />
                <Route exact path='/orders' element={<MyOrders />} />
                <Route exact path='/order/:id' element={<OrderDetails />} />
+               <Route exact path='/cart' element={<Cart />} />
+
 
             </Route>
 
@@ -118,7 +120,6 @@ function App() {
             <Route exact path='/login' element={<LoginSignup />} />
             <Route exact path='/about' element={<About />} />
             <Route exact path='/contact' element={<Contact />} />
-            <Route exact path='/cart' element={<Cart />} />
             <Route path='*' element={<Notfound />} />
 
          </Routes>
